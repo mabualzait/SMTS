@@ -4,7 +4,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![MATLAB Version](https://img.shields.io/badge/MATLAB-R2020b%2B-orange.svg)](https://www.mathworks.com/products/matlab.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Paper](https://img.shields.io/badge/Paper-IEEE%20TEVC%20%2F%20SWEVO-brightgreen)](paper/manuscript.md)
+![Paper](https://img.shields.io/badge/Paper-In%20Preparation-brightgreen)
 
 > **Official Implementation of "Starling Murmuration Topological Search: Scale-Free Information Transfer and Dynamic Neighborhoods for High-Dimensional Optimization"**
 
@@ -77,10 +77,6 @@ $$\mathbf{v}_i(t+1) = w(\tau) \mathbf{v}_i(t) + c_1(\tau) \mathbf{r}_1 \odot \ma
 │   ├── benchmark_functions.m      # MATLAB benchmark suite (Sphere, Rastrigin, etc.)
 │   ├── test_smts.m                # Automated MATLAB test script
 │   └── run_benchmarks.m           # Comparative SMTS vs PSO benchmark script
-├── paper/
-│   ├── manuscript.tex             # Complete IEEE Transactions style LaTeX manuscript
-│   ├── manuscript.md              # Formatted Markdown manuscript with all equations
-│   └── references.bib             # BibTeX citations
 ├── plots/
 │   ├── confusion_matrix.png       # Classification benchmark confusion matrix
 │   ├── convergence_grid_D30.png   # Convergence curves across landscape classes (30D)
