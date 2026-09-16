@@ -1,0 +1,63 @@
+name: SMTS Continuous Integration
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  python-test:
+    name: Python Unit Tests & ML Benchmark (${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install pytest scikit-learn
+
+      - name: Run Pytest Test Suite
+        run: |
+          pytest tests/ -v
+
+      - name: Execute Machine Learning Classification Benchmark
+        run: |
+          python src/experiments/ml_benchmark.py
+
+      - name: Verify Generated Artifacts
+        run: |
+          test -f results/classification_benchmark.json
+          test -f plots/confusion_matrix.png
+          echo "All Python test benchmarks and artifacts verified successfully."
+
+  octave-matlab-test:
+    name: MATLAB / Octave Compatibility Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install GNU Octave
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y octave
+
+      - name: Run MATLAB/Octave SMTS Verification Script
+        run: |
+          octave --no-gui --eval "addpath('matlab'); run('matlab/test_smts.m');"

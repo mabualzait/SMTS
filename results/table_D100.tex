@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\caption{Experimental results on CEC benchmark functions ($D = 100$) over 30 independent runs. Best mean values are in \textbf{bold}. $+/=/-$ denotes SMTS is statistically significantly better, equivalent, or worse via Wilcoxon signed-rank test ($\alpha = 0.05$).}
+\label{tab:results_D100}
+\scriptsize
+\begin{tabular}{lcccccc}
+\hline
+Function & \textbf{SMTS} & \textbf{L-SHADE} & \textbf{CMA-ES} & \textbf{CLPSO} & \textbf{PSO} & \textbf{GWO} \\
+\hline
+F1: High-Conditioned Elliptic & 8.44e+07 $\pm$ 2.13e+07 & 3.78e+06 $\pm$ 8.56e+05 (-) & \textbf{9.20e+05 $\pm$ 2.64e+05} (-) & 9.69e+08 $\pm$ 1.42e+08 (+) & 3.15e+08 $\pm$ 1.71e+08 (+) & 2.07e+08 $\pm$ 7.16e+07 (+) \\
+F2: Bent Cigar & 1.13e+06 $\pm$ 1.14e+06 & \textbf{2.40e+03 $\pm$ 3.47e+03} (-) & 4.63e+08 $\pm$ 1.07e+09 (+) & 4.72e+08 $\pm$ 8.08e+07 (+) & 1.92e+10 $\pm$ 9.68e+09 (+) & 2.16e+10 $\pm$ 6.19e+09 (+) \\
+F3: Discus & 9.85e+04 $\pm$ 9.80e+03 & \textbf{1.22e+04 $\pm$ 4.51e+03} (-) & 6.70e+04 $\pm$ 2.66e+04 (-) & 3.06e+05 $\pm$ 3.21e+04 (+) & 9.87e+04 $\pm$ 2.09e+04 (=) & 1.03e+05 $\pm$ 1.11e+04 (=) \\
+F4: Rosenbrock & 2.76e+02 $\pm$ 3.79e+01 & 2.12e+02 $\pm$ 2.95e+01 (-) & \textbf{1.48e+02 $\pm$ 6.75e+01} (-) & 5.13e+02 $\pm$ 4.40e+01 (+) & 1.68e+03 $\pm$ 8.57e+02 (+) & 1.92e+03 $\pm$ 4.38e+02 (+) \\
+F5: Ackley & 2.14e+01 $\pm$ 2.08e-02 & 2.06e+01 $\pm$ 2.81e-01 (-) & \textbf{2.05e+01 $\pm$ 6.65e-01} (-) & 2.14e+01 $\pm$ 2.13e-02 (=) & 2.13e+01 $\pm$ 3.39e-02 (-) & 2.14e+01 $\pm$ 2.92e-02 (=) \\
+F6: Rastrigin & 3.42e+02 $\pm$ 7.25e+01 & \textbf{1.60e+02 $\pm$ 1.70e+01} (-) & 2.85e+02 $\pm$ 4.25e+01 (-) & 1.02e+03 $\pm$ 2.60e+01 (+) & 6.92e+02 $\pm$ 2.26e+02 (+) & 5.30e+02 $\pm$ 1.80e+02 (+) \\
+F7: Griewank & 3.23e-01 $\pm$ 1.61e-01 & 4.11e-03 $\pm$ 5.94e-03 (-) & \textbf{2.47e-04 $\pm$ 1.33e-03} (-) & 5.10e+00 $\pm$ 5.19e-01 (+) & 2.10e+02 $\pm$ 6.82e+01 (+) & 1.90e+02 $\pm$ 5.20e+01 (+) \\
+F8: Hybrid (Elliptic+Rastrigin+Ackley) & 5.21e+06 $\pm$ 1.81e+06 & 2.16e+05 $\pm$ 8.89e+05 (-) & \textbf{4.80e+04 $\pm$ 2.49e+04} (-) & 5.61e+07 $\pm$ 1.16e+07 (+) & 1.01e+07 $\pm$ 4.49e+06 (+) & 4.50e+06 $\pm$ 1.79e+06 (=) \\
+F9: Hybrid (Cigar+Griewank+Rosenbrock) & 6.37e+04 $\pm$ 2.61e+04 & \textbf{2.80e+04 $\pm$ 7.73e+03} (-) & 2.44e+05 $\pm$ 7.45e+04 (+) & 1.76e+09 $\pm$ 2.67e+08 (+) & 1.79e+05 $\pm$ 6.70e+04 (+) & 1.75e+06 $\pm$ 4.62e+06 (+) \\
+F10: Composition (Rastrigin+Ackley+Sphere) & 1.98e+02 $\pm$ 5.21e-01 & \textbf{1.98e+02 $\pm$ 1.39e-12} (-) & \textbf{1.98e+02 $\pm$ 4.67e-14} (-) & 6.54e+02 $\pm$ 8.36e+01 (+) & 8.37e+03 $\pm$ 5.57e+03 (+) & 2.02e+04 $\pm$ 4.81e+03 (+) \\
+\hline
+\end{tabular}
+\end{table*}
