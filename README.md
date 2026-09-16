@@ -1,6 +1,6 @@
 # Starling Murmuration Topological Search (SMTS)
 
-[![CI](https://github.com/malikabualzait/SMTS/actions/workflows/ci.yml/badge.svg)](https://github.com/malikabualzait/SMTS/actions/workflows/ci.yml)
+[![CI](https://github.com/mabualzait/SMTS/actions/workflows/ci.yml/badge.svg)](https://github.com/mabualzait/SMTS/actions/workflows/ci.yml)
 [![Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![MATLAB Version](https://img.shields.io/badge/MATLAB-R2020b%2B-orange.svg)](https://www.mathworks.com/products/matlab.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -118,7 +118,7 @@ $$\mathbf{v}_i(t+1) = w(\tau) \mathbf{v}_i(t) + c_1(\tau) \mathbf{r}_1 \odot \ma
 
 ### Installation
 ```bash
-git clone https://github.com/malikabualzait/SMTS.git
+git clone https://github.com/mabualzait/SMTS.git
 cd SMTS
 pip install -r requirements.txt
 pip install -e .
@@ -295,7 +295,7 @@ If you use SMTS in your research, please cite our paper:
   author={Abu Alzait, Malik and Antigravity AI Research Team},
   journal={IEEE Transactions on Evolutionary Computation},
   year={2026},
-  note={Under Review. Code available at: https://github.com/malikabualzait/SMTS}
+  note={Under Review. Code available at: https://github.com/mabualzait/SMTS}
 }
 ```
 
